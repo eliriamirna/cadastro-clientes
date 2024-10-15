@@ -1,0 +1,31 @@
+{
+  "name": "cadastro-clientes",
+  "version": "1.0.0",
+  "description": "Este é um projeto básico de um CRUD de informações de cliente com upload de arquivos em PDF. A API também faz integração com o ViaCep para busca de endereço pelo cep",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.7",
+    "pg": "^8.13.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/multer": "^1.4.12",
+    "@types/pg": "^8.11.10"
+  }
+}
