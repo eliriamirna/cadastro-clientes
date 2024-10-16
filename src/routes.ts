@@ -7,16 +7,19 @@ import UploadController from "./controllers/upload-controller";
 const routes = Router()
 
 // @ts-ignore
-routes.post('/cliente', new ClienteController().create)
+routes.post('/clientes', new ClienteController().create)
 
 // @ts-ignore
 routes.get('/clientes', new ClienteController().get)
 
 // @ts-ignore
-routes.put('/cliente/:codigo', new ClienteController().update)
+routes.get('/clientes/:codigo', new ClienteController().getOne)
 
 // @ts-ignore
-routes.delete('/cliente/:codigo', new ClienteController().delete)
+routes.put('/clientes/:codigo', new ClienteController().update)
+
+// @ts-ignore
+routes.delete('/clientes/:codigo', new ClienteController().delete)
 
 // @ts-ignore
 routes.post('/upload', upload.single('file'), new UploadController().uploadFile);

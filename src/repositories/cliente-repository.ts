@@ -42,7 +42,7 @@ export default class ClienteRepository {
     }
 
     async findByCod(codigo: number) {
-        const query = 'select * from clientes where codigo = $1'
+        const query = `select * from clientes where codigo = $1`;
         const  { rows } = await pool.query(query, [codigo])
         return rows[0]
     }

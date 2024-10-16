@@ -38,6 +38,31 @@ export default class ClienteController {
         }
     }
 
+    async getOne(req: Request, res: Response): Promise<Response> {
+        const { codigo } = req.params;         
+        try {
+            const clientesRepository = new ClienteRepository()
+
+            const codigoNumber = parseInt(codigo, 10);
+          
+            if (isNaN(codigoNumber)) {
+            return res.status(400).json({ message: 'Código inválido' });
+            }
+            
+            const cliente = await clientesRepository.findByCod(codigoNumber);
+
+            if (!cliente) {
+            return res.status(404).json({ message: 'Cliente não encontrado' });
+            }
+
+            return res.status(200).json(cliente);
+          
+        } catch (error) {
+          console.error('Erro ao buscar cliente pelo código:', error);
+          return res.status(500).json({ message: 'Erro interno do servidor' });
+        }
+    }
+
     async update(req: Request, res: Response) {
         const { codigo } = req.params;
         const codigoNumber = Number(codigo)
