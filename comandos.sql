@@ -1,5 +1,6 @@
 create database clientes;
 
+-- CREATE TABLE
 CREATE TABLE "clientes" (
   "codigo" serial NOT NULL,
   "nome" varchar(255),
@@ -8,7 +9,7 @@ CREATE TABLE "clientes" (
   "cidade" varchar(255),
   "file_name" varchar(255),
   "file_path" varchar(255),
-  PRIMARY KEY ("codigo"),
+  PRIMARY KEY ("codigo")
 );
 
 DROP TABLE clientes;

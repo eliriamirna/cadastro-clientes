@@ -1,7 +1,7 @@
 {
   "name": "cadastro-clientes",
   "version": "1.0.0",
-  "description": "Este é um projeto básico de um CRUD de informações de cliente com upload de arquivos em PDF. A API também faz integração com o ViaCep para busca de endereço pelo cep",
+  "description": "Este é um projeto básico de um CRUD de informações de cliente com upload de arquivos em PDF.",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec ts-node src/index.ts",
@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
     "@types/express": "^5.0.0",
     "@types/node": "^22.7.5",
     "cors": "^2.8.5",
