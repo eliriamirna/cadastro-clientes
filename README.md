@@ -10,8 +10,10 @@ Este projeto implementa a API para um cadastro básico de clientes utilizando **
   - Endereço
   - Cidade 
   - CEP 
+
 - **Upload de Arquivos**: 
   - Permite anexar um arquivo PDF ao cadastro de clientes.
+  
 - **Edição e Exclusão de Clientes**: 
   - Clientes podem ser editados e excluídos através dos endpoints da API.
 
