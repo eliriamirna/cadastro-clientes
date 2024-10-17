@@ -13,7 +13,7 @@ Este projeto implementa a API para um cadastro básico de clientes utilizando **
 
 - **Upload de Arquivos**: 
   - Permite anexar um arquivo PDF ao cadastro de clientes.
-  
+
 - **Edição e Exclusão de Clientes**: 
   - Clientes podem ser editados e excluídos através dos endpoints da API.
 
@@ -51,7 +51,7 @@ Este projeto implementa a API para um cadastro básico de clientes utilizando **
 
 3. Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente:
 
-    ```bash
+    ```
     PORTA=5000
     PG_USER=postgres
     PG_PASSWORD=postgres
@@ -97,7 +97,7 @@ A API possui os seguintes endpoints:
 
 Exemplo de Requisição para Criação de Cliente
 
-    ```bash
+    ```
     POST /clientes
     Content-Type: application/json
     {
@@ -110,7 +110,7 @@ Exemplo de Requisição para Criação de Cliente
 
 Exemplo de Requisição para Upload de Arquivos
 
-    ```bash
+    ```
     POST /clientes
     Content-Type: multipart/form-data
     {
@@ -121,7 +121,7 @@ Exemplo de Requisição para Upload de Arquivos
 
 ## Estrutura do projeto
 
-    ```bash
+    ```
     .
     ├── src
     │   ├── controllers
