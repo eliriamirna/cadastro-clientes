@@ -78,10 +78,10 @@ export default class ClienteController {
             }
            
     
-            clienteExistente.nome = nome || clienteExistente.nome;
-            clienteExistente.cep = cep || clienteExistente.cep;
-            clienteExistente.endereco = endereco || clienteExistente.endereco;
-            clienteExistente.cidade = cidade || clienteExistente.cidade;
+            clienteExistente.nome = nome !== undefined ? nome : clienteExistente.nome;
+            clienteExistente.cep = cep !== undefined ? cep : clienteExistente.cep;
+            clienteExistente.endereco = endereco !== undefined ? endereco : clienteExistente.endereco;
+            clienteExistente.cidade = cidade !== undefined ? cidade : clienteExistente.cidade;
             
             const clienteAtualizado = await clienteRepository.update(codigo, clienteExistente);
     
